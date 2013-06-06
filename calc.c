@@ -89,7 +89,7 @@ static int release_routine(PINODE inode, PFILE file)
 
 static ssize_t read_routine(PFILE filp, char *buffer, size_t length, loff_t * offset)
 {
-        static int fin = 0;
+        static int fin = 0;//static
         long a, b, result = 0;
         char name[MESSAGE_LEN], op = 0, *end;
         int written = 0;
